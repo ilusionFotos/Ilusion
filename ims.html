@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="icon" href="https://urieltgc.github.io/images/imgs/img/icons/moon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar contaner">
+        <div class="left">
+            <ul>
+                <li><img class="logo" src="icons/logos.png" alt=""></li>
+                <li>Modelos de Cuadros Grupales</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="swiper mySwiper container">
+        <div class="swiper-wrapper" id="image-container"></div>
+    </div>
+        <div class="desktop">
+            <img src="PAGINA/LOGO.png" alt="">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script >
+         const maxImages = 100; // Cambia este valor según el rango estimado de imágenes
+        const imagePath = "CATALOGO/"; // Ruta de las imágenes
+        const imageContainer = document.getElementById("image-container");
+
+        // Función para cargar imágenes
+        function loadImages() {
+            for (let i = 0; i < maxImages; i++) {
+                const formattedNumber = i.toString().padStart(2, '0'); // Formato 00, 01, 02, etc.
+                const imageFile = `${imagePath}${formattedNumber}.jpg`;
+
+                // Verificar si la imagen existe
+                const imgTest = new Image();
+                imgTest.src = imageFile;
+
+                imgTest.onload = function () {
+                    // Solo agregar la imagen si existe
+                    const slide = document.createElement("div");
+                    slide.classList.add("swiper-slide");
+
+                    const img = document.createElement("img");
+                    img.src = imageFile;
+                    img.alt = `Image ${formattedNumber}`;
+
+                    slide.appendChild(img);
+                    imageContainer.appendChild(slide);
+                };
+
+                imgTest.onerror = function () {
+                    console.log(`Imagen ${imageFile} no encontrada.`);
+                };
+            }
+        }
+
+        // Cargar imágenes al inicializar la página
+        loadImages();
+var swiper = new Swiper(".mySwiper",{
+    slidesPerView: 1,
+    spaceBetween: 80,
+    grabCursor:true,
+    loop: true,
+    breakpoints: {
+        991:{
+            slidesPerView:3
+        }
+    }
+})
+
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+    </script>
+    <script src="../../repositorios/source/lock.js"></script>
+</body>
+</html>
