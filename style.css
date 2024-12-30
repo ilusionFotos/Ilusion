@@ -207,6 +207,54 @@ header {
     background-color: #00c3ff;
 }
 
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link{
+    width: 25%;
+}
+
+.link h3{
+    font-size: 20px;
+    color: #dfdde0;
+    margin-bottom: 20px;
+}
+
+.link p{
+    color: #8b7e7b;
+    font-size: 14px;
+    margin: 0 50px 15px 0;
+}
+
+.link ul li a{
+    display: inline-block;
+    font-size: 16px;
+    color: #dfdde0;
+    margin-bottom: 10px;
+}
+
+.link form{
+    display: flex;
+    flex-direction: column;
+}
+
+.inp{
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btn-4{
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: #3d001d;
+    border: 0;
+    color: #dfdde0;
+}
+
 /* Responsividad */
 @media (max-width: 991px) {
 
