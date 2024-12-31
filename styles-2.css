@@ -63,13 +63,13 @@ li a{
     box-shadow: 0 30px 30px rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     height: 420px;
-    width: 295px;
+    width: 350px;
     position: relative;
 }
 
 .swiper-slide img{
     margin-bottom: 50px;
-    width: 295px;
+    width: 350px;
     border-radius: 15px;
     height: 420px;
 }
