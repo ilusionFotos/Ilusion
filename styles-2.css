@@ -62,16 +62,14 @@ li a{
     background-color: #ffffff;
     box-shadow: 0 30px 30px rgba(255, 255, 255, 0.2);
     border-radius: 15px;
-    height: 420px;
-    width: 350px;
+    width: 100%;
     position: relative;
 }
 
 .swiper-slide img{
+    width: 100%;
     margin-bottom: 50px;
-    width: 350px;
     border-radius: 15px;
-    height: 420px;
 }
 
 .swiper-txt{
